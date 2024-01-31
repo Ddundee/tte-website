@@ -36,13 +36,19 @@ export const footerLists = [
 				slug: '/work/help_in_india',
 			},
 			{
+				title: 'Neurodiversity in FIRST',
+				slug: 'work/neurodiversity_in_first',
+			},
+			{
+				title: 'Diwali Fundraising',
+				slug: 'work/diwali_fundraising',
+			},
+			
+			{
 				title: 'Makerspaces In Jamaica',
 				slug: '/work/makerspaces_in_jamaica',
 			},
-      		{
-				title: 'Tech Renewal Initiative',
-				slug: 'work/tech_renewal_initiative',
-			},
+      		
 		],
 	},
 	{

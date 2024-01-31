@@ -1,0 +1,73 @@
+---
+import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
+import ProfileCard from '../../components/cards/ProfileCard.astro';
+import ImageCard from '../../components/cards/ImageCard.astro';
+
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Neurodiversity in FIRST | Tech To Empower',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+const num = [1, 2, 3,4]
+---
+
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Neurodiversity in FIRST</h1>
+			<p>In pursuing inclusivity, Tech To Empower is currently compiling innovative resources—ranging from instructional videos to mentor connection apps—that will seamlessly integrate neurodiverse students into STEM. The goal is to present these ideas to educational administrations and foster partnerships with neurodiverse societies. This initiative is not just about global impact; it's a commitment to ensuring that every student, can contribute to the ever-expanding narrative of STEM education. 
+﻿			</p>
+		</div>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/screenshots/neuro/main.webp"
+				alt="Astro Odyssee"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+	<Container>
+		<section class="feature-card__section" id="officiers">
+			<h2>Pictures</h2>
+			<div class="feature-card__grid">
+				{num.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/neuro/${pic}`} desc="a"></ImageCard>)}
+				
+			</div> 
+		</section>
+	</Container>
+	
+</Layout>
+
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	.asdsa {
+		min-height: 100px;
+
+	}
+</style>
