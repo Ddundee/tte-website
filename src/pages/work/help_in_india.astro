@@ -20,7 +20,9 @@ const seo = {
 	title: 'Help In India | Tech To Empower',
 	description: 'Landing Page #1 | Astro Odyssey Theme',
 };
-const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+const interestEvent = [1, 2, 3, 4, 5, 6, 7, 8,];
+const makerspace = [20, 21];
+const teamsStarted = [18, 9, 10, 11, 12, 13, 16, 17];
 ---
 
 <Layout seo={seo} >
@@ -40,13 +42,33 @@ const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 	</TextAndImageHero>
 	<Container>
 		<section class="feature-card__section" id="officiers">
-			<h2>Pictures</h2>
+			<h2>Interest Events</h2>
 			<div class="feature-card__grid">
-				{num.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/india/${pic}`} desc="a"></ImageCard>)}
+				{interestEvent.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/india/${pic}`} desc="a"></ImageCard>)}
 				
 			</div> 
 		</section>
 	</Container>
+	<Container>
+		<section class="feature-card__section" id="officiers">
+			<h2>Makerspaces</h2>
+			<div class="feature-card__grid">
+				{makerspace.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/india/${pic}`} desc="a"></ImageCard>)}
+				
+			</div> 
+		</section>
+	</Container>
+	<Container>
+		<section class="feature-card__section" id="officiers">
+			<h2>Team Progress</h2>
+			<div class="feature-card__grid">
+				{teamsStarted.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/india/${pic}`} desc="a"></ImageCard>)}
+				
+			</div> 
+		</section>
+	</Container>
+	
+	
 	
 </Layout>
 
