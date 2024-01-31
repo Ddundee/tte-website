@@ -49,7 +49,7 @@ const {name, imgSrc, role} = Astro.props;
     <div class="featured-card__content">
       <h3 class="feature-card__title">{name}</h3>
       <h4 class="feature-card__title">{role}</h3>
-      
+
       <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
       <picture>
         <source srcset={`${imgSrc}.webp`} type="image/webp" >
@@ -57,4 +57,3 @@ const {name, imgSrc, role} = Astro.props;
       </picture>
     </div>
 </div> 
-

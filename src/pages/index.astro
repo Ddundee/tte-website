@@ -1,12 +1,16 @@
 ---
 import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
 import ProfileCard from '../components/cards/ProfileCard.astro';
-
 import Layout from '../layouts/Page.astro';
 import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+const seo = {
+	title: 'Tech To Empower',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
 ---
 
-<Layout>
+
+<Layout seo={seo}>
 	<HomeHeroSection />
 	<Container>
 		<section class="feature-card__section" id="work">
@@ -16,14 +20,15 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 				</FeatureCard>
 				<FeatureCard href="/work/makerspaces_in_jamaica" title="Makerspaces in Jamaica" imgSrc="/assets/images/home/screenshots/landing-2">
 				</FeatureCard>
-				<FeatureCard href="/work/tech_renewal_initiative" title="Tech Renewal Initiative" imgSrc="/assets/images/home/screenshots/landing-3">
+				<!-- <FeatureCard href="/work/tech_renewal_initiative" title="Tech Renewal Initiative" imgSrc="/assets/images/home/screenshots/landing-3">
 				</FeatureCard>
-				<FeatureCard href="/work/tech_renewal_initiative" title="Diwali Fundraising" imgSrc="/assets/images/home/screenshots/landing-4">
-				</FeatureCard>
-				
+				 -->
 				
 			</div>
 		</section>
+		<div class="asdsa">
+
+		</div>
 	</Container>
 
 	<Container>
@@ -36,8 +41,8 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 				</ProfileCard>
 				<ProfileCard role="Tech Lead" name="Ronith Pai" imgSrc="/assets/images/home/screenshots/landing-3">
 				</ProfileCard>
-				<ProfileCard role="Secretary" name="Raghav Padmasolala" imgSrc="/assets/images/home/screenshots/landing-3">
-				</ProfileCard>
+				<!-- <ProfileCard role="Secretary" name="Raghav Padmasolala" imgSrc="/assets/images/home/screenshots/landing-3">
+				</ProfileCard> -->
 			</div>
 		</section>
 	</Container>
@@ -56,5 +61,9 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 		.feature-card__grid {
 			grid-template-columns: 1fr;
 		}
+	}
+	.asdsa {
+		min-height: 100px;
+
 	}
 </style>

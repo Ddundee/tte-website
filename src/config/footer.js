@@ -1,80 +1,71 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/littlesticksdev',
-    icon: "mdi:twitter",
+    name: 'Instagram',
+    url: 'https://www.instagram.com/tech_to_empower/?hl=en',
+    icon: "mdi:instagram",
   },
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/c/LittleSticks',
-    icon: "mdi:youtube",
+    name: 'Linkedin',
+    url: 'https://www.instagram.com/tech_to_empower/?hl=en',
+    icon: "mdi:linkedin",
   },
-  {
-    name: 'Github',
-    url: 'https://github.com/littlesticks',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://littlesticks.dev/discord',
-    icon: "ic:baseline-discord",
-  },
+  
+//   {
+//     name: 'Youtube',
+//     url: 'https://youtube.com/c/LittleSticks',
+//     icon: "mdi:youtube",
+//   },
+//   {
+//     name: 'Github',
+//     url: 'https://github.com/littlesticks',
+//     icon: "mdi:github",
+//   },
+//   {
+//     name: 'Discord',
+//     url: 'https://littlesticks.dev/discord',
+//     icon: "ic:baseline-discord",
+//   },
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Our Work',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: 'Help in India',
+				slug: '/work/help_in_india',
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Makerspaces In Jamaica',
+				slug: '/work/makerspaces_in_jamaica',
 			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
+      		{
+				title: 'Tech Renewal Initiative',
+				slug: 'work/tech_renewal_initiative',
+			},
 		],
 	},
 	{
-		title: 'Company',
+		title: 'Officers',
 		items: [
 			{
-				title: 'About',
-				slug: '/company/about',
+				title: 'Sahas Kumaraguru - President',
+				slug: 'https://www.instagram.com/sahas_kumaraguru11077/',
 			},
 			{
-				title: 'Blog',
+				title: 'Pravith Munipalle - Media Director',
 				slug: '/blog',
 			},
 			{
-				title: 'Contact',
+				title: 'Ronith Pai - Tech Lead',
 				slug: '/company/contact',
 			},
+			// {
+			// 	title: 'Raghav Padmasolala - Secretary',
+			// 	slug: '/company/contact',
+			// },
+			
 		],
 	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
-		],
-	},
+	
 ];
