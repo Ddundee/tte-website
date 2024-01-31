@@ -8,7 +8,7 @@ export const footerSocials = [
     name: 'Linkedin',
     url: 'https://www.instagram.com/tech_to_empower/?hl=en',
     icon: "mdi:linkedin",
-  },
+  }
   
 //   {
 //     name: 'Youtube',
@@ -54,11 +54,11 @@ export const footerLists = [
 			},
 			{
 				title: 'Pravith Munipalle - Media Director',
-				slug: '/blog',
+				slug: 'https://www.instagram.com/pravithmunipalle/',
 			},
 			{
 				title: 'Ronith Pai - Tech Lead',
-				slug: '/company/contact',
+				slug: 'https://www.instagram.com/ronith_pai/',
 			},
 			// {
 			// 	title: 'Raghav Padmasolala - Secretary',

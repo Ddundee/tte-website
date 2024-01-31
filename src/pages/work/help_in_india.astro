@@ -1,4 +1,8 @@
 ---
+import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
+import ProfileCard from '../../components/cards/ProfileCard.astro';
+import ImageCard from '../../components/cards/ImageCard.astro';
+
 import {Icon} from 'astro-icon'
 import {
   AnnouncementBar,
@@ -16,6 +20,7 @@ const seo = {
 	title: 'Help In India| Tech To Empower',
 	description: 'Landing Page #1 | Astro Odyssey Theme',
 };
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 ---
 
 <Layout seo={seo} >
@@ -33,5 +38,35 @@ const seo = {
 			/>
 		</picture>
 	</TextAndImageHero>
+	<Container>
+		<section class="feature-card__section" id="officiers">
+			<h2>Pictures</h2>
+			<div class="feature-card__grid">
+				{num.map(pic => <ImageCard imgSrc={`/assets/images/home/screenshots/india/${pic}`} desc="a"></ImageCard>)}
+				
+			</div> 
+		</section>
+	</Container>
+	
 </Layout>
 
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	.asdsa {
+		min-height: 100px;
+
+	}
+</style>
