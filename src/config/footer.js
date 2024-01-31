@@ -62,10 +62,11 @@ export const footerLists = [
 				title: 'Pravith Munipalle - Media Director',
 				slug: 'https://www.instagram.com/pravithmunipalle/',
 			},
-			{
-				title: 'Ronith Pai - Tech Lead',
-				slug: 'https://www.instagram.com/ronith_pai/',
-			},
+			// {
+			// 	title: 'Ronith Pai - Tech Lead',
+			// 	slug: 'https://www.instagram.com/ronith_pai/',
+			// },
+			
 			// {
 			// 	title: 'Raghav Padmasolala - Secretary',
 			// 	slug: '/company/contact',
