@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/png" href="/favicon.png">
+<!-- Primary Meta Tags -->
+<title>Tech To Empower</title>
+<meta name="title" content="Tech To Empower">
+<meta name="description" content="Landing Page #1 | Astro Odyssey Theme">
+<link rel="canonical" href="https://www.techtoempower.org/">
+<!-- Generator -->
+<meta name="generator" content="Astro v1.6.2">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.techtoempower.org/">
+<meta property="og:title" content="Tech To Empower">
+<meta property="og:description" content="Landing Page #1 | Astro Odyssey Theme">
+<meta property="og:image" content="https://www.techtoempower.org/social.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.techtoempower.org/">
+<meta property="twitter:title" content="Tech To Empower">
+<meta property="twitter:description" content="Landing Page #1 | Astro Odyssey Theme">
+<meta property="twitter:image" content="https://www.techtoempower.org/social.png">
+
+<!-- For Demonstration of the themes -->
+<!-- This is a simple script to check if there is a theme value in local storage. That way the theme stays with you between pages --><script>
+	const doc = document.firstElementChild;
+	const localStorageTheme = localStorage.getItem('theme');
+
+	if (localStorageTheme !== null) {
+		doc.setAttribute('data-theme', localStorageTheme);
+	}
+</script>
+
+
+<!-- Google Analytics -->
+
+	<link rel="stylesheet" href="/assets/index.36659b1e.css" />
+<link rel="stylesheet" href="/assets/consider-hybrid-work.b2663bb1.css" />
+<link rel="stylesheet" href="/assets/contact.271e14f3.css" /><script type="module">
+</script>
+<script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+/** Bundled JS generated from "@astrojs/lit/client-shim.js" */
+var N = Object.defineProperty;
+var i = (t, n) => () => (t && (n = t((t = 0))), n);
+var b = (t, n) => {
+	for (var a in n) N(t, a, { get: n[a], enumerable: !0 });
+};
+function s() {
+	if (d === void 0) {
+		let t = document.createElement('div');
+		(t.innerHTML = '<div><template shadowroot="open"></template></div>'),
+			(d = !!t.firstElementChild.shadowRoot);
+	}
+	return d;
+}
+var d,
+	m = i(() => {});
+var p,
+	c,
+	f,
+	u = i(() => {
+		(p = (t) => t.parentElement === null),
+			(c = (t) => t.tagName === 'TEMPLATE'),
+			(f = (t) => t.nodeType === Node.ELEMENT_NODE);
+	});
+var h,
+	E = i(() => {
+		m();
+		u();
+		h = (t) => {
+			var n;
+			if (s()) return;
+			let a = [],
+				e = t.firstElementChild;
+			for (; e !== t && e !== null; )
+				if (c(e)) a.push(e), (e = e.content);
+				else if (e.firstElementChild !== null) e = e.firstElementChild;
+				else if (f(e) && e.nextElementSibling !== null) e = e.nextElementSibling;
+				else {
+					let o;
+					for (; e !== t && e !== null; )
+						if (p(e)) {
+							o = a.pop();
+							let r = o.parentElement,
+								l = o.getAttribute('shadowroot');
+							if (((e = o), l === 'open' || l === 'closed')) {
+								let y = o.hasAttribute('shadowrootdelegatesfocus');
+								try {
+									r.attachShadow({ mode: l, delegatesFocus: y }).append(o.content);
+								} catch {}
+							} else o = void 0;
+						} else {
+							let r = e.nextElementSibling;
+							if (r != null) {
+								(e = r), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							let l =
+								(n = e.parentElement) === null || n === void 0 ? void 0 : n.nextElementSibling;
+							if (l != null) {
+								(e = l), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							(e = e.parentElement), o !== void 0 && (o.parentElement.removeChild(o), (o = void 0));
+						}
+				}
+		};
+	});
+var w = i(() => {
+	E();
+});
+var v = {};
+b(v, { hasNativeDeclarativeShadowRoots: () => s, hydrateShadowRoots: () => h });
+var S = i(() => {
+	m();
+	w();
+});
+async function g() {
+	let { hydrateShadowRoots: t } = await Promise.resolve().then(() => (S(), v));
+	window.addEventListener('DOMContentLoaded', () => t(document.body), { once: true });
+}
+var x = new DOMParser()
+	.parseFromString('<p><template shadowroot="open"></template></p>', 'text/html', {
+		includeShadowRoots: !0,
+	})
+	.querySelector('p');
+(!x || !x.shadowRoot) && g();
+</script></head>
+	<body>
+		<a href="#content" class="astro-BDIWEA2F">Skip to main content</a>
+
+
+    
+		<script type="module">
+  const bodyElement = document.querySelector('body');
+  const menuButton = document.querySelector('#menuButton')
+  const navHeader = document.querySelector('#odysseyNavHeader');
+  const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
+  const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
+  let scrollPosition = 0;
+
+  menuButton.addEventListener('click', toggleMenu)
+
+  function toggleMenu() {
+    menuButtonIconHam.toggleAttribute('hidden');
+    menuButtonIconClose.toggleAttribute('hidden');
+    
+    if (navHeader.hasAttribute('mobile-menu-open', true)) {
+      menuButton.title = "Open Main Menu"
+      // unlock scroll position
+      bodyElement.style.removeProperty('overflow');
+      bodyElement.style.removeProperty('position');
+      bodyElement.style.removeProperty('top');
+      bodyElement.style.removeProperty('width');
+      window.scrollTo(0, scrollPosition);
+    } else {
+      menuButton.title = "Close Main Menu"
+      // lock scroll position
+      scrollPosition = window.pageYOffset;
+      bodyElement.style.overflow = 'hidden';
+      bodyElement.style.position = 'fixed';
+      bodyElement.style.top = `-${scrollPosition}px`;
+      bodyElement.style.width = '100%';
+    }
+    
+    navHeader.toggleAttribute('mobile-menu-open');
+  }
+</script>  
+
+<header id="odysseyNavHeader" class="header--right astro-7I2N7XJP">
+  <div class="header-logo-menu__container astro-7I2N7XJP">
+  <button id="menuButton" title="Open Main Menu" class="astro-7I2N7XJP">
+    <span id="menuButtonIconHam" class="astro-7I2N7XJP">
+      <svg viewBox="0 0 24 24" width="24px" height="24px" class="astro-7I2N7XJP" astro-icon="ic:baseline-menu"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </span>
+    <span id="menuButtonIconClose" hidden class="astro-7I2N7XJP">
+      <svg viewBox="0 0 24 24" width="24px" height="24px" class="astro-7I2N7XJP" astro-icon="ic:baseline-close"><path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </span>
+  </button>
+  <a class="header-logo__link astro-7I2N7XJP" href="/">
+    <span>
+			<p class="odyssey-logo astro-TSFTCFJQ">TTE</p>
+
+
+		</span>
+  </a>
+  </div>
+  <div class="header-nav__container astro-7I2N7XJP">
+    
+      <nav class="astro-7I2N7XJP">
+        <ul class="astro-7I2N7XJP">
+          
+        </ul>
+      </nav>
+    
+  </div>
+  <div class="header-action-item__container astro-7I2N7XJP">
+    
+  </div>
+</header>
+		<main id="content">
+			<div id="page">
+		<div class="content__container  astro-4LGS25LW">
+  <section class="hero-section__section astro-Q74AAUQ5">
+		<div class="hero-section__text astro-Q74AAUQ5">
+				<h1 class="astro-Q74AAUQ5">Tech To Empower</h1>
+				<p class="astro-Q74AAUQ5">
+					A 501(c)(3) non-profit orginization for empowering struggling communities around the world with robotics and STEM. <!-- todo -->
+				</p>
+				<div class="hero-btns__container astro-Q74AAUQ5">
+					<a class="btn undefined undefined undefined astro-5VNEE24L" href="#work" target="" rel="">Our Work</a>
+
+
+					<a class="btn undefined undefined undefined astro-5VNEE24L" href="#officiers" target="" rel="">Officers</a>
+
+
+					
+				</div>
+        <!-- {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>} -->
+		</div>
+		<div class="hero-section__image astro-Q74AAUQ5">
+				<picture class="astro-Q74AAUQ5">
+					<img src="/assets/images/home/classic-hero.jpg" alt="Astro Odyssey" id="home-hero-image" class="astro-Q74AAUQ5">
+				</picture>
+		</div>
+	</section>
+</div>
+
+<div class="content__container  astro-4LGS25LW">
+  <section class="feature-card__section astro-LDYFYDOY" id="work">
+			<h2 class="astro-LDYFYDOY">Our Work</h2>
+			<div class="feature-card__grid astro-LDYFYDOY">
+				
+
+
+<div class="feature-card__card astro-EERPUJOH">
+  <a class="feature-card__link astro-EERPUJOH" href="/work/help_in_india">
+    <div class="featured-card__content astro-EERPUJOH">
+      <h3 class="feature-card__title astro-EERPUJOH">STEM in India</h3>
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-EERPUJOH">
+        <source srcset="/assets/images/home/screenshots/landing-1.webp" type="image/webp" class="astro-EERPUJOH">
+        <img class="feature-card__img astro-EERPUJOH" src="/assets/images/home/screenshots/landing-1.png" alt="STEM in India" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+  </a>
+</div>
+				
+
+
+<div class="feature-card__card astro-EERPUJOH">
+  <a class="feature-card__link astro-EERPUJOH" href="/work/neurodiversity_in_first">
+    <div class="featured-card__content astro-EERPUJOH">
+      <h3 class="feature-card__title astro-EERPUJOH">Neurodiversity in FIRST</h3>
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-EERPUJOH">
+        <source srcset="/assets/images/home/screenshots/neuro/main.webp" type="image/webp" class="astro-EERPUJOH">
+        <img class="feature-card__img astro-EERPUJOH" src="/assets/images/home/screenshots/neuro/main.png" alt="Neurodiversity in FIRST" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+  </a>
+</div>
+				
+
+
+<div class="feature-card__card astro-EERPUJOH">
+  <a class="feature-card__link astro-EERPUJOH" href="/work/diwali_fundraising">
+    <div class="featured-card__content astro-EERPUJOH">
+      <h3 class="feature-card__title astro-EERPUJOH">Diwali Fundraising</h3>
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-EERPUJOH">
+        <source srcset="/assets/images/home/screenshots/fundraising/main.webp" type="image/webp" class="astro-EERPUJOH">
+        <img class="feature-card__img astro-EERPUJOH" src="/assets/images/home/screenshots/fundraising/main.png" alt="Diwali Fundraising" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+  </a>
+</div>
+				
+				
+
+
+<div class="feature-card__card astro-EERPUJOH">
+  <a class="feature-card__link astro-EERPUJOH" href="/work/makerspaces_in_jamaica">
+    <div class="featured-card__content astro-EERPUJOH">
+      <h3 class="feature-card__title astro-EERPUJOH">Makerspaces in Jamaica</h3>
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-EERPUJOH">
+        <source srcset="/assets/images/home/screenshots/landing-2.webp" type="image/webp" class="astro-EERPUJOH">
+        <img class="feature-card__img astro-EERPUJOH" src="/assets/images/home/screenshots/landing-2.png" alt="Makerspaces in Jamaica" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+  </a>
+</div>
+
+				<!-- <FeatureCard href="/work/tech_renewal_initiative" title="Tech Renewal Initiative" imgSrc="/assets/images/home/screenshots/landing-3">
+				</FeatureCard>
+				 -->
+				
+			</div>
+		</section><div class="asdsa astro-LDYFYDOY">
+
+		</div>
+</div><div class="content__container  astro-4LGS25LW">
+  <section class="feature-card__section astro-LDYFYDOY" id="officiers">
+			<h2 class="astro-LDYFYDOY">Officers</h2>
+			<div class="feature-card__grid astro-LDYFYDOY">
+				
+
+
+<div class="feature-card__card astro-7VXAZJGI">
+    <div class="featured-card__content astro-7VXAZJGI">
+      <h3 class="feature-card__title astro-7VXAZJGI">Sahas Kumaraguru</h3>
+      <h4 class="feature-card__title astro-7VXAZJGI">President</h4>
+
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-7VXAZJGI">
+        <source srcset="/assets/images/home/screenshots/pfps/saucypoo.webp" type="image/webp" class="astro-7VXAZJGI">
+        <img class="feature-card__img astro-7VXAZJGI" src="/assets/images/home/screenshots/pfps/saucypoo.png" alt="Sahas Kumaraguru" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+</div>
+                <!-- <ProfileCard role="Chief Operating Officer" name="Shrest Das" imgSrc="/assets/images/home/screenshots/pfps/shrest_das"> -->
+                
+
+
+<div class="feature-card__card astro-7VXAZJGI">
+    <div class="featured-card__content astro-7VXAZJGI">
+      <h3 class="feature-card__title astro-7VXAZJGI">Raghav Padmasolala</h3>
+      <h4 class="feature-card__title astro-7VXAZJGI">Vice President</h4>
+
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-7VXAZJGI">
+        <source srcset="/assets/images/home/screenshots/pfps/raghav_padmasolala.webp" type="image/webp" class="astro-7VXAZJGI">
+        <img class="feature-card__img astro-7VXAZJGI" src="/assets/images/home/screenshots/pfps/raghav_padmasolala.png" alt="Raghav Padmasolala" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+</div>
+				
+
+
+<div class="feature-card__card astro-7VXAZJGI">
+    <div class="featured-card__content astro-7VXAZJGI">
+      <h3 class="feature-card__title astro-7VXAZJGI">Pravith Munipalle</h3>
+      <h4 class="feature-card__title astro-7VXAZJGI">Media Director</h4>
+
+      <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
+      <picture class="astro-7VXAZJGI">
+        <source srcset="/assets/images/home/screenshots/pfps/pravith.webp" type="image/webp" class="astro-7VXAZJGI">
+        <img class="feature-card__img astro-7VXAZJGI" src="/assets/images/home/screenshots/pfps/pravith.png" alt="Pravith Munipalle" loading="lazy" width="780" height="585" decoding="async">
+      </picture>
+    </div>
+</div>
+				<!-- <ProfileCard role="Tech Lead" name="Ronith Pai" imgSrc="/assets/images/home/screenshots/pic1">
+					
+				</ProfileCard> -->
+				<!-- <ProfileCard role="Secretary" name="Raghav Padmasolala" imgSrc="/assets/images/home/screenshots/landing-3">
+				</ProfileCard> -->
+			</div>
+		</section>
+</div>
+	</div>
+		</main>
+		<footer style="--footer-bg:var(--theme-surface-1); --footer-color:var(--theme-on-surface-1)" class="astro-A52JHQYS">
+  <div class="content__container  astro-4LGS25LW">
+  <div class="footer-grid__container astro-A52JHQYS">
+      <div class="footer-brand__container astro-A52JHQYS">
+        <div class="astro-A52JHQYS">
+          <p class="odyssey-logo astro-TSFTCFJQ">TTE</p>
+
+
+        </div>
+        <ul class="footer-socials__list astro-A52JHQYS">
+          <li class="footer-socials__item astro-A52JHQYS">
+                <a href="https://www.instagram.com/tech_to_empower/?hl=en" target="_blank" rel="noopener noreferrer" class="footer-socials__link astro-A52JHQYS" title="Open Instagram profile">
+                  <svg viewBox="0 0 24 24" width="24px" height="24px" class="astro-A52JHQYS" astro-icon="mdi:instagram"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+                </a>
+              </li><li class="footer-socials__item astro-A52JHQYS">
+                <a href="https://www.instagram.com/tech_to_empower/?hl=en" target="_blank" rel="noopener noreferrer" class="footer-socials__link astro-A52JHQYS" title="Open Linkedin profile">
+                  <svg viewBox="0 0 24 24" width="24px" height="24px" class="astro-A52JHQYS" astro-icon="mdi:linkedin"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+              </li>
+        </ul>
+      </div>
+      <div class="astro-A52JHQYS">
+            <p class="astro-A52JHQYS"><strong class="astro-A52JHQYS">Our Work</strong></p>
+            <ul class="footer-link__list astro-A52JHQYS">
+              <li class="astro-A52JHQYS">
+                  <a href="/work/help_in_india" class="astro-A52JHQYS">Help in India</a>
+                </li><li class="astro-A52JHQYS">
+                  <a href="work/neurodiversity_in_first" class="astro-A52JHQYS">Neurodiversity in FIRST</a>
+                </li><li class="astro-A52JHQYS">
+                  <a href="work/diwali_fundraising" class="astro-A52JHQYS">Diwali Fundraising</a>
+                </li><li class="astro-A52JHQYS">
+                  <a href="/work/makerspaces_in_jamaica" class="astro-A52JHQYS">Makerspaces In Jamaica</a>
+                </li>
+            </ul>
+          </div><div class="astro-A52JHQYS">
+            <p class="astro-A52JHQYS"><strong class="astro-A52JHQYS">Officers</strong></p>
+            <ul class="footer-link__list astro-A52JHQYS">
+              <li class="astro-A52JHQYS">
+                  <a href="https://www.instagram.com/sahas_kumaraguru11077/" class="astro-A52JHQYS">Sahas Kumaraguru - President</a>
+                </li><li class="astro-A52JHQYS">
+                  <a href="/company/contact" class="astro-A52JHQYS">Raghav Padmasolala - VicePresident</a>
+                </li>
+            </ul>
+          </div>
+    </div><div class="footer-copyright__container astro-A52JHQYS">
+      
+      <p class="astro-A52JHQYS">Copyright &copy; 2024 TTE</p>
+    </div>
+</div>
+</footer>
+	</body></html>
+

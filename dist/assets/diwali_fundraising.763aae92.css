@@ -1,0 +1,1 @@
+.feature-card__section:where(.astro-J5PNMLH4){margin:var(--section-margin) auto}.feature-card__grid:where(.astro-J5PNMLH4){display:grid;grid-template-columns:repeat(2,1fr);gap:var(--theme-grid-gap)}@media (max-width: 768px){.feature-card__grid:where(.astro-J5PNMLH4){grid-template-columns:1fr}}.asdsa:where(.astro-J5PNMLH4){min-height:100px}

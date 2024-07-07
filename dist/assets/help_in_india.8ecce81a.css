@@ -1,0 +1,1 @@
+.feature-card__section:where(.astro-HSESTBD7){margin:var(--section-margin) auto}.feature-card__grid:where(.astro-HSESTBD7){display:grid;grid-template-columns:repeat(2,1fr);gap:var(--theme-grid-gap)}@media (max-width: 768px){.feature-card__grid:where(.astro-HSESTBD7){grid-template-columns:1fr}}.asdsa:where(.astro-HSESTBD7){min-height:100px}
